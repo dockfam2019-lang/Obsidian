@@ -21,10 +21,14 @@
             "id": "1eb183aac507953f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "CLAUDE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CLAUDE"
             }
           }
         ]
@@ -191,6 +195,25 @@
   },
   "active": "a36c2ff43b0e7d1b",
   "lastOpenFiles": [
+    "Journal/2026-05-26.md",
+    "Knowledge/AutoCAD Plugin Tech Stack.md",
+    "Knowledge/Business Background.md",
+    "Knowledge/Community and Faith.md",
+    "Knowledge/Bryan's Interests.md",
+    "Knowledge/Bryan's Mindset.md",
+    "Home.md",
+    "Tasks/Operation Ascend Weekly Log.md",
+    "Reference/Resume.md",
+    "Reference",
+    "Projects/Operation Ascend.md",
+    "Journal/2026-05-23.md",
+    "AI Memory/Working with Jarvis.md",
+    "Tasks/AutoCAD Plugin MVP Tasks.md",
+    "Projects/AutoCAD Tracking Plugin.md",
+    "People/Caleb Dockstader.md",
+    "People/Bryan.md",
+    "Templates/ai-memory-note.md",
+    "CLAUDE.md",
     "Untitled 2.base",
     "Untitled.md",
     "Welcome.md",
