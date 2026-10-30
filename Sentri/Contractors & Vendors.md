@@ -36,6 +36,12 @@ Rating: ✅ would use again · ⚠️ mixed · ❌ avoid
 | Julius Myers | Flooring | | Dave & Marilyn | |
 | TruBlue of Grand Blanc | Handyman | MI | Charlotte Pemberton | |
 | Gonzalez Woodworks | Cabinets | | Tafoya | |
+| Darnell | Roofing/trim | NW IN | Pryor (backup) | |
+| Lance Crabtree | Cabinets | Lima OH | Dowling (on the card) | |
+| John Taft | Flooring | IA | Brianna Green | |
+| Danda Electric | Electrical | VT | Eggen (replied) | |
+| John Murphy | Electrical | VT | Eggen (call 10/27) | |
+| Christopher | Electrical | Lima OH | Dowling | ❌ Not licensed, withdrew |
 | Maranatha Consulting | Demo/GC | Lima OH | Dowling (bid) | Only quoted demo |
 
 ## Suppliers & Services

@@ -55,6 +55,9 @@ In April I was a junior trying out AI tools and hunting for an AutoCAD drafting 
 - **Candreva fell apart** (Mitchell fired the crew 9/9, cancelled)
 - Dowling attorney-threat scare, de-escalated
 
+### Sept 23: Grok Bot Teams
+- Set up three Grok rooms (Sentri ops, Centennial Academy, Health & Life) → [[Projects/AI Bot Teams]]
+
 ### October: Systems
 - **Daily loop goes fully automated:** 7am priorities + 5pm check-in as scheduled tasks
 - Closed: Clifton (10/12), Brianna Green (10/14), **Dawn Smith (10/21, $12K final)**
@@ -92,6 +95,9 @@ In April I was a junior trying out AI tools and hunting for an AutoCAD drafting 
 - [ ] Dowling: countertop installer, Tim on Sunday, William's invoice
 - [ ] Pryor: Richard's payment Monday, soffit/fascia, dumpster pickup
 - [ ] Fix the 7am trigger double-firing
+- [ ] Pryor margin check: $4,000 labor vs the ~$2,400 guidance
+- [ ] Collect finals: Dowling $18,705, Pryor $6,699
+- [ ] Settle the Grok-vs-Claude conflicts (time zone, Tim's pay method, Dawn Smith painter amount)
 - [ ] Carlos Slim presentation 12/2
 - [ ] Senior thesis choice
 

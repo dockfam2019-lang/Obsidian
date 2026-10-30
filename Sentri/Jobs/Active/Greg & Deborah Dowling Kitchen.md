@@ -43,3 +43,10 @@ My first major remodel (picked it up ~2 weeks into the job). Greg and Deborah ar
 - Scott Adrian, Adroit Contracting & Electrical: 419-615-0355
 
 Related: [[Sentri/Sentri Homes]] · [[Sentri/Lessons Learned]]
+
+## From Grok (10/30) [[AI Conversations/Grok/2026-10-30 Sentri Work Context (Grok)|Grok]]
+- **Greg's $18,705 final** is the biggest outstanding. Collect it after countertops + finish work
+- Lance Crabtree is listed on the cabinets card. Christopher applied for the electrical, then withdrew (not licensed)
+- Tim is paid by **Venmo** per Grok (he texted 3× on 10/27 that it hadn't arrived). Claude's notes say Eddy/Zelle, so confirm
+- William got his Phase 2 payment 10/27
+- Tim's hood/dishwasher circuit quote → run it through a margin check, probably a change order

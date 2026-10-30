@@ -8,8 +8,8 @@ updated: 2026-10-30
 | Day | AM | PM |
 |---|---|---|
 | Mon | American History (Mr. Jonathan Hammon) | Choir |
-| Tue | Leadership & Senior Transitions | AI Masterclass |
-| Wed | Art Appreciation | Senior Finance |
+| Tue | Senior Leadership | AI Mastermind |
+| Wed | Art Appreciation | Personal Finance |
 | Thu | Senior Literature | Church History |
 
 Sentri work days while in school: **Mon, Thu, Fri**
@@ -30,3 +30,25 @@ Sentri work days while in school: **Mon, Thu, Fri**
 Related: [[People/Bryan]]
 
 - Ch. 1–6 study guide, Sonnet 75, history Qs: [[AI Conversations/Topics/School]]
+
+## Homework Load (from Grok, 10/30)
+- **History:** chapter reading + end-of-chapter questions. The PDF arrives Fri–Sun, so start Sunday. Heavy
+- **Senior Lit:** always has homework, and it's hard. Heavy
+- Leadership: occasional readings/events. AI Mastermind: no write-ups. Art: journals + presentations. Personal Finance: assignments. Church History: reading only. Choir: none
+- Teacher bot "Brother Hammond" + the school bot team → [[Projects/AI Bot Teams]]
+
+## Timeline
+- 9/24: Senior Lit **Beowulf** annotations (passed QC)
+- 9/29: Leadership reading, Will Guidera + Dale Carnegie
+- 10/26: **American History test**, Brinkley Ch 4–6 (Seven Years' War → taxation → Revolution → Constitution). Up until ~1 AM studying. Built the public Ch 1–6 study guide
+- 10/27: Leadership "mystery event" + Eggcellent kickoff
+- 10/28: Art journal. October finances assignment + phone picture
+- 10/29: Senior Lit dramatic recitation (**Sonnet 75**) + annotations
+
+## Open
+- [ ] Confirm what got finished last week so the tracker updates
+- [ ] Next History chapter PDF + next Senior Lit assignment
+- [ ] Art Appreciation presentation (date unknown)
+- [ ] Carlos Slim paper + presentation 12/2
+
+Source: [[AI Conversations/Grok/2026-10-30 School Context (Grok)]]

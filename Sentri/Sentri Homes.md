@@ -7,7 +7,7 @@ updated: 2026-10-30
 > Hub for everything Sentri. Jobs live in the [[Sentri/Jobs/Job Board]].
 
 ## The Company
-- **Sentri Homes LLC** (Century Homes is the older name, and some sales agents still use it on calls). Residential GC that works nationwide and remotely.
+- **Sentri Homes LLC.** Always write "Sentri Homes", **never "Century"** (some old notes and sales calls use it). Residential GC that works nationwide and remotely.
 - Address: 625 State Hwy 59, Hildale, UT 84784, phone (435) 681-3428
 - PA Home Improvement Contractor reg #PA211747 (valid to 05/02/2028)
 - Leads come from Angi/transfer leads → sales closes → fulfillment (coordinators) hires subs + orders materials → Sentri keeps the margin
@@ -27,8 +27,10 @@ updated: 2026-10-30
 - [[People/Alonso Timpson]] (CFO, signs contractor agreements)
 - [[People/Brady]] (estimator/sales, often underbids)
 - [[People/Violet Barlow]] (senior coordinator)
-- Other coordinators: Alexis Dutson, Corban, Carrie/Carlie, Sarita
-- Sales agents: Jeanette Zimmerman, Carter Nettell, Avery Hammon, Tristan Iverson, Verla, Donald, Brady Timpson
+- Other coordinators: **Alexis Dutson** (owns the contractor line, 928-691-4549), Corban, Carrie/Carlie, Sarita
+- **Donald**: manager. Refunds go to Steven + Donald
+- Sales agents: Jeanette Zimmerman, Carter Nettell, Avery Hammon, Tristan Iverson, Verla, Brady Timpson
+- Other coordinators (my bots stay off their jobs): Blake, Braden, Carly
 
 ## Systems
 | Tool | Used for |
@@ -43,7 +45,8 @@ updated: 2026-10-30
 | **Exepron** | Critical Chain scheduling, learning it for home builds |
 
 ## Rules & Policies
-- **Margin target: 40–50% gross**
+- **Margin target: 40–50% gross. Hard floor 40%** (below = caution/stop, extra scope = change order)
+- Homeowner texts from my line, contractor texts from Alexis's line. **Never cross them** → [[Sentri/Texting Voice & Hard Rules]]
 - Deposits to subs need **Monte or Steven** sign-off
 - Subs need a Secretary of State check + COI. Contractor agreement signed by Alonso
 - "Sentri method" = hire individual contractors off Indeed (more margin than hiring out a contracting company)
@@ -62,6 +65,8 @@ updated: 2026-10-30
 9. Contact info (PM name, number, email) + "Please contact me directly if you have any questions"
 
 ## Related
+- [[Sentri/Texting Voice & Hard Rules]]
+- [[Projects/AI Bot Teams]]
 - [[Sentri/Contractors & Vendors]]
 - [[Sentri/Lessons Learned]]
 - [[Projects/Sentri Automation]]

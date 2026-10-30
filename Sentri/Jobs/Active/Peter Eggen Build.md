@@ -69,3 +69,10 @@ updated: 2026-10-30
 Related: [[Sentri/Sentri Homes]] · [[Sentri/Contractors & Vendors]]
 
 - Related construction Q&A: [[AI Conversations/Topics/Homebuilding]]
+
+## From Grok (10/30) [[AI Conversations/Grok/2026-10-30 Sentri Work Context (Grok)|Grok]]
+- Brad's $25K = two **$12,500** halves (resolved as a Draw 2 credit on 10/16)
+- [ ] **Upstairs windows**: priced change order needed (2–4 week special order)
+- [ ] Send revised plans to the framers
+- [ ] Confirm what the concrete sub supplies
+- Electrician leads: John Murphy (call 10/27), **Danda Electric** + several other VT electricians replied

@@ -14,9 +14,12 @@
   - 🟢 [[Sentri/Jobs/Active/Matthew Pryor Roof]]: Merrillville, IN
 - [[Sentri/Contractors & Vendors]]: who to hire again (and who not to)
 - [[Sentri/Lessons Learned]]: patterns that cost money
+- [[Sentri/Texting Voice & Hard Rules]]
 
 ## 🎯 Projects
 - [[Projects/Sentri Automation]]: daily 7am/5pm job loop, handbook, tools
+- [[Projects/AI Bot Teams]]: Grok Sentri, School, and Health teams
+- [[Projects/Personal Life Tracker]]
 - [[Projects/AutoCAD Tracking Plugin]]: with Caleb (needs a status update)
 - [[Projects/AI Trading Bot]]: Alpaca paper trading
 - [[Projects/TradeSignal]]: contractor-reporting pilot site
@@ -42,6 +45,7 @@
 - [[Knowledge/Business Background]]
 - [[Knowledge/Community and Faith]]
 - [[Knowledge/School - Senior Year]]
+- [[Knowledge/Health & Fitness]]
 - [[Knowledge/Tools & AI Stack]]
 - [[Knowledge/Investing]]
 - [[Knowledge/AutoCAD Plugin Tech Stack]]
@@ -55,6 +59,7 @@
 ## 💬 AI Conversations
 - [[AI Conversations/AI Conversations Index]]: 50 ChatGPT + Codex chats (Oct 16–30)
 - [[AI Conversations/Context and Preferences]]
+- Grok context files: [[AI Conversations/Grok/2026-10-30 Sentri Work Context (Grok)|Work]] · [[AI Conversations/Grok/2026-10-30 School Context (Grok)|School]] · [[AI Conversations/Grok/2026-10-30 Health & Life Context (Grok)|Health]]
 
 ## 🤖 AI Memory
 - [[AI Memory/Working with Jarvis]]

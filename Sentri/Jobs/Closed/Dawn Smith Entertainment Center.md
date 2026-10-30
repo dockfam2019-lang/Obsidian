@@ -10,3 +10,5 @@ location: Orlando, FL
 - Painters: Una Moss started 9/3, then ghosted. New painters signed 9/23
 - **$12K final collected 10/21**, Job Complete 10/22
 - Loose end: confirm the $1,442 painter payout
+
+- Grok (10/30): painters owed **$400 for the pool border** (vs. $1,442 in Claude's notes, so confirm). Contract signature still open

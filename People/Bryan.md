@@ -4,6 +4,7 @@
 **Phone:** (435) 212-1100
 **Email:** dockfam2019@gmail.com
 **Location:** Centennial Park, AZ
+**Time zone:** Grok files say he uses Utah Mountain time (America/Denver, DST). Some systems use Arizona time
 
 ## Who He Is
 All-around guy — high intelligence, athletic, competitive. Self-aware enough to call himself a narcissist. Most people's read on him is based on who he was in 7th-9th grade, which is a bad sample. He's grown past it.

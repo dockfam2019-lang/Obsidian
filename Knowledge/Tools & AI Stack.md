@@ -23,3 +23,9 @@ updated: 2026-10-30
 
 ## Hardware
 - MacBook Air + 34" and 30" monitors. Keyboard pick: Logitech MX Keys Mini
+
+## Multi-Agent
+- **Grok Bot** teams for Sentri, school, health → [[Projects/AI Bot Teams]]
+- **Mausebot.com** to run Claude, ChatGPT, and Grok agents together. No direct Claude↔Grok connector, so the bridge is Notion or paste
+- Also uses ChatGPT + Codex → [[AI Conversations/AI Conversations Index]]
+- "Experon" = probably Exepron. Alternatives looked at: JobTread, Buildertrend, Hyphen BuilderGM. Get the real name from Steven/Donald

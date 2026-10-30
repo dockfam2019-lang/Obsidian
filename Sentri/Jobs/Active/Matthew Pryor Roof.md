@@ -27,3 +27,11 @@ updated: 2026-10-30
 - [ ] Notion: Contractor Status still "Onboarding", Material "Ordered", so update both
 
 Related: [[Sentri/Jobs/Active/Merrillville Harrison St Roof]] · [[Sentri/Sentri Homes]]
+
+## From Grok (10/30) [[AI Conversations/Grok/2026-10-30 Sentri Work Context (Grok)|Grok]]
+- **Final: $6,699** after the gutters + drip edge
+- **Sold scope included 47 LF gutter, 78 sf soffit, 47 LF fascia.** That's why the soffit/fascia gap matters: it was sold and needs to get done
+- ⚠️ **Margin:** guidance was roof + trim labor ≤ ~$2,400 to hold 40%. Richard is at **$4,000** before soffit/fascia, so this job is likely under the 40% floor. Run the numbers
+- Materials: ~$5,140 Home Depot list (Charcoal vs Pewter Gray)
+- Backup roofer/trim: **Darnell**
+- Richard's W-9 still missing as of 10/22

@@ -13,6 +13,11 @@ Archive of recent **ChatGPT + Codex** conversations, imported 2026-10-30.
 - **Raw source file:** [[AI Conversations/_raw/2026-10-30 ChatGPT-Codex export]]
 - **Summary of what the archive says about me:** [[AI Conversations/Context and Preferences]]
 
+## Grok Bot Context Files (2026-10-30)
+- [[AI Conversations/Grok/2026-10-30 Sentri Work Context (Grok)]]
+- [[AI Conversations/Grok/2026-10-30 School Context (Grok)]]
+- [[AI Conversations/Grok/2026-10-30 Health & Life Context (Grok)]]
+
 ## Topics
 - [[AI Conversations/Topics/Fantasy Football|Fantasy Football]] (11)
 - [[AI Conversations/Topics/Appearance & Grooming|Appearance & Grooming]] (7)
