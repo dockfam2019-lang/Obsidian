@@ -9,7 +9,7 @@ created: 2026-10-30
 ## Big Picture
 In April I was a junior trying out AI tools and hunting for an AutoCAD drafting job. By October I'm a senior who:
 - became the **highest-throughput coordinator at Sentri Homes** within ~3 months, after starting mid-May with zero GC experience
-- has coordinated **30+ jobs** in 20+ states (roofing, siding, flooring, kitchens, carpentry) and is now GC on a **$200K ground-up home in Vermont**
+- has coordinated **35+ jobs** (28 completed in Notion by late Oct) in 20+ states (roofing, siding, flooring, kitchens, carpentry) and is now GC on a **$200K ground-up home in Vermont**
 - built an **AI operations system** (Claude + Notion + Quo) that runs twice a day on its own, and that the owner wants rolled out to the team
 - started side builds: an AI trading bot, TradeSignal, a job margin tracker, Nodal Studios sites, a Snapchat reply bot
 
