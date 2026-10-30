@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic American Supply — Colorado City, AZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C8102E;
+    --navy: #0A1628;
+    --tan: #F5F0E8;
+    --gold: #D4A843;
+    --white: #FFFFFF;
+    --gray: #6B7280;
+    --light: #F9F7F3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--white);
+    letter-spacing: 2px;
+  }
+  .nav-logo span { color: var(--red); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200,16,46,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 6% 5% 6% 8%;
+    position: relative; z-index: 2;
+  }
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.2s forwards;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    line-height: 0.95;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.4s forwards;
+  }
+  .hero-title .accent { color: var(--red); }
+  .hero-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.6);
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.6s forwards;
+  }
+  .hero-ctas {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.8s forwards;
+  }
+  .btn-primary {
+    background: var(--red);
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    border: none; border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #a50d24; transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-right {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 6% 8% 6% 4%;
+    position: relative; z-index: 2;
+  }
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px; overflow: hidden;
+    animation: fadeIn 0.8s ease 1s both;
+  }
+  .stat-box {
+    background: rgba(255,255,255,0.04);
+    padding: 2rem 1.8rem;
+    transition: background 0.2s;
+  }
+  .stat-box:hover { background: rgba(255,255,255,0.08); }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* MARQUEE */
+  .marquee-strip {
+    background: var(--red);
+    padding: 0.7rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-inner {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+  }
+  .marquee-inner span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--white);
+    margin: 0 2rem;
+    opacity: 0.9;
+  }
+  .marquee-inner span.dot { color: var(--gold); margin: 0 0.5rem; }
+
+  /* SERVICES */
+  .services {
+    padding: 7rem 8%;
+    background: var(--light);
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    line-height: 1;
+    color: var(--navy);
+    margin-bottom: 3.5rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5px;
+    background: var(--navy);
+    border-radius: 8px; overflow: hidden;
+  }
+  .service-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .service-card:hover { background: var(--tan); }
+  .service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .service-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    letter-spacing: 1px;
+  }
+  .service-desc {
+    font-size: 0.87rem;
+    color: var(--gray);
+    line-height: 1.65;
+  }
+
+  /* UPS HIGHLIGHT */
+  .ups-section {
+    background: var(--navy);
+    padding: 5rem 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .ups-left .section-label { color: var(--gold); }
+  .ups-left .section-title { color: var(--white); margin-bottom: 1.2rem; }
+  .ups-desc {
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .ups-features { list-style: none; }
+  .ups-features li {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .ups-features li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .ups-right {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+  }
+  .ups-badge {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .ups-logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: var(--white);
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .ups-logo-text span { color: var(--gold); }
+  .ups-sub {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 2rem;
+  }
+  .ups-hours {
+    background: rgba(200,16,46,0.15);
+    border: 1px solid rgba(200,16,46,0.3);
+    border-radius: 6px;
+    padding: 1.2rem;
+  }
+  .ups-hours-title {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--red);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .hours-row {
+    display: flex; justify-content: space-between;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    padding: 0.3rem 0;
+  }
+  .hours-row .open { color: #4ade80; font-weight: 500; }
+
+  /* CONTACT */
+  .contact {
+    padding: 7rem 8%;
+    background: var(--tan);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-left .section-title { margin-bottom: 1rem; }
+  .contact-left p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .contact-details { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+  }
+  .contact-icon {
+    width: 40px; height: 40px;
+    background: var(--navy);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .contact-info { display: flex; flex-direction: column; }
+  .contact-info strong {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+  .contact-info span {
+    font-size: 0.95rem;
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  .contact-form {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 40px rgba(10,22,40,0.08);
+  }
+  .form-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--navy);
+    background: var(--white);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--navy);
+  }
+  .form-group textarea { resize: none; height: 100px; }
+  .form-submit {
+    width: 100%;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.9rem;
+    border: none; border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--red); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    padding: 3rem 8%;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    color: var(--white);
+    letter-spacing: 2px;
+  }
+  .footer-logo span { color: var(--red); }
+  .footer-copy {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+  }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .ups-section { grid-template-columns: 1fr; gap: 2rem; }
+    .contact { grid-template-columns: 1fr; gap: 2rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">BASIC <span>AMERICAN</span> SUPPLY</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#ups">UPS Shipping</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Colorado City, AZ · Est. Local Supply</p>
+    <h1 class="hero-title">YOUR LOCAL<br><span class="accent">SUPPLY</span><br>STORE</h1>
+    <p class="hero-desc">Everything you need, right here in Colorado City. From packing supplies to UPS shipping — we've got you covered.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Get In Touch</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-box">
+        <div class="stat-num">UPS</div>
+        <div class="stat-label">Authorized Drop-Off</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Days a Week</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">LOCAL</div>
+        <div class="stat-label">Colorado City, AZ</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Locally Owned</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>PACKING SUPPLIES</span><span class="dot">◆</span>
+    <span>UPS SHIPPING</span><span class="dot">◆</span>
+    <span>MOVING SUPPLIES</span><span class="dot">◆</span>
+    <span>BOXES & TAPE</span><span class="dot">◆</span>
+    <span>COLORADO CITY</span><span class="dot">◆</span>
+    <span>LOCALLY OWNED</span><span class="dot">◆</span>
+    <span>PACKING SUPPLIES</span><span class="dot">◆</span>
+    <span>UPS SHIPPING</span><span class="dot">◆</span>
+    <span>MOVING SUPPLIES</span><span class="dot">◆</span>
+    <span>BOXES & TAPE</span><span class="dot">◆</span>
+    <span>COLORADO CITY</span><span class="dot">◆</span>
+    <span>LOCALLY OWNED</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <p class="section-label">What We Offer</p>
+  <h2 class="section-title">OUR SERVICES</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">📦</span>
+      <div class="service-name">Packing Supplies</div>
+      <p class="service-desc">Boxes, bubble wrap, tape, foam, and everything else you need to pack and protect your items safely.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚚</span>
+      <div class="service-name">UPS Shipping</div>
+      <p class="service-desc">Authorized UPS drop-off location. Ship pre-packaged or create a new shipment right in store.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏠</span>
+      <div class="service-name">Moving Supplies</div>
+      <p class="service-desc">Everything you need for a move — boxes in all sizes, tape guns, markers, and protective wrap.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🛒</span>
+      <div class="service-name">General Supply</div>
+      <p class="service-desc">A wide range of household and business supplies stocked for the Colorado City community.</p>
+    </div>
+  </div>
+</section>
+
+<!-- UPS -->
+<section class="ups-section" id="ups">
+  <div class="ups-left">
+    <p class="section-label" style="color: var(--gold)">Authorized Location</p>
+    <h2 class="section-title" style="color: var(--white)">UPS DROP-OFF<br>& SHIPPING</h2>
+    <p class="ups-desc">We're a fully staffed UPS Authorized Shipping Provider. Drop off pre-labeled packages, create brand new shipments, or purchase packaging materials — all in one stop.</p>
+    <ul class="ups-features">
+      <li>Drop off pre-packaged, pre-labeled shipments</li>
+      <li>Create new shipments from scratch</li>
+      <li>Purchase boxes, envelopes & packaging</li>
+      <li>Friendly, knowledgeable staff on hand</li>
+      <li>Serving Colorado City & surrounding areas</li>
+    </ul>
+  </div>
+  <div class="ups-right">
+    <div class="ups-badge">AUTHORIZED PROVIDER</div>
+    <div class="ups-logo-text">U<span>P</span>S</div>
+    <div class="ups-sub">Shipping & Drop-Off Services</div>
+    <div class="ups-hours">
+      <div class="ups-hours-title">Store Hours</div>
+      <div class="hours-row"><span>Mon – Fri</span><span class="open">8am – 6pm</span></div>
+      <div class="hours-row"><span>Saturday</span><span class="open">9am – 4pm</span></div>
+      <div class="hours-row"><span>Sunday</span><span style="color: rgba(255,255,255,0.35)">Closed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">COME SEE US<br>IN STORE</h2>
+    <p>We're right here in Colorado City — stop by anytime during store hours or send us a message and we'll get back to you.</p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-info">
+          <strong>Address</strong>
+          <span>Colorado City, AZ 86021</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-info">
+          <strong>Hours</strong>
+          <span>Mon–Fri 8am–6pm · Sat 9am–4pm</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-info">
+          <strong>Phone</strong>
+          <span>(928) 875-0000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form">
+    <div class="form-title">Send Us a Message</div>
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" placeholder="John Smith">
+    </div>
+    <div class="form-group">
+      <label>Phone or Email</label>
+      <input type="text" placeholder="(928) 555-0000">
+    </div>
+    <div class="form-group">
+      <label>What do you need?</label>
+      <select>
+        <option>UPS Shipping Question</option>
+        <option>Packing Supplies</option>
+        <option>Moving Supplies</option>
+        <option>General Inquiry</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea placeholder="Any questions or details..."></textarea>
+    </div>
+    <button class="form-submit">Send Message →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">BASIC <span>AMERICAN</span> SUPPLY</div>
+  <div class="footer-copy">© 2026 Basic American Supply · Colorado City, AZ</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#ups">UPS</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

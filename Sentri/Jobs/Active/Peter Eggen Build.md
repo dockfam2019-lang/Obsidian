@@ -76,3 +76,10 @@ Related: [[Sentri/Sentri Homes]] · [[Sentri/Contractors & Vendors]]
 - [ ] Send revised plans to the framers
 - [ ] Confirm what the concrete sub supplies
 - Electrician leads: John Murphy (call 10/27), **Danda Electric** + several other VT electricians replied
+
+## Files
+- House plans: [[Attachments/Eggen/Vt_House_Plans (2).pdf|VT house plans]] · [[Attachments/Eggen/Elevations and Floor Plans.pdf|Elevations & floor plans]] · [[Attachments/Eggen/Plan1of2_Ostafin.pdf|Plan 1]] · [[Attachments/Eggen/Plan2of2_Ostafin.pdf|Plan 2]]
+- Permits: [[Attachments/Eggen/WW-2-7902-1_Permit.pdf|WW/PWS permit]] · [[Attachments/Eggen/Zoning Permit Application David Ostafin.pdf|Zoning application]]
+- Money: [[Attachments/Eggen/Sentri_Homes_Cost_Ostafin_Querido.pdf|Cost breakdown]] · [[Attachments/Eggen/Sentri_Homes_Fixtures_Ostafin_Querido.pdf|Fixtures]]
+- Contracts: [[Attachments/Eggen/Mike_Hescock_agreement..pdf|Mike Hescock]] · [[Attachments/Eggen/Sentri_Servicing_Agreement_Eggen_Brad_BBForms.docx|Brad / B&B Forms]]
+- All files → [[Files/Important Files]]

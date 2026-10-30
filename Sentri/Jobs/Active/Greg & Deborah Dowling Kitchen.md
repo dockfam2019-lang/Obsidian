@@ -50,3 +50,7 @@ Related: [[Sentri/Sentri Homes]] · [[Sentri/Lessons Learned]]
 - Tim is paid by **Venmo** per Grok (he texted 3× on 10/27 that it hadn't arrived). Claude's notes say Eddy/Zelle, so confirm
 - William got his Phase 2 payment 10/27
 - Tim's hood/dishwasher circuit quote → run it through a margin check, probably a change order
+
+## Files
+- [[Attachments/Dowling/Greg dowling scope .pdf|Scope]] · [[Attachments/Dowling/Greg Dowling Quote.pdf|Quote]] · [[Attachments/Dowling/Docksteder V2 Quote DWGS Lanc Ocean ASSEMB 63026.pdf|Cabinet drawings V2]] · [[Attachments/Dowling/Menards Greg Dowling Countertops.pdf|Menards countertops]] · [[Attachments/Dowling/WholesaleCabinets-1000172369.pdf|Wholesale Cabinets order]]
+- All files → [[Files/Important Files]]

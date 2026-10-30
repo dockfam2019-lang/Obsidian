@@ -12,3 +12,6 @@ tags: [project, business]
 - Status since June: unclear. Update this
 
 Related: [[Knowledge/Business Background]]
+
+## Site Files
+- [[Attachments/Nodal Studios/cabinet_man_john.html|Cabinet Man John]] · [[Attachments/Nodal Studios/basic-american-supply.html|Basic American Supply]] · [[Attachments/Nodal Studios/UpperKuts-standalone.html|UpperKuts]] · [[Attachments/Nodal Studios/Nodelic Studio _standalone_.html|Nodelic Studio]]

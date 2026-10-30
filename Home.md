@@ -52,6 +52,8 @@
 
 ## 📁 Reference
 - [[Reference/Resume]]
+- [[Files/Important Files]]: docs copied from your computer
+- [[Files/Computer Cleanup - Delete List]]
 
 ## 📓 Journal
 - [[Journal/2026-10-30]] · [[Journal/2026-05-26]] · [[Journal/2026-05-23]]

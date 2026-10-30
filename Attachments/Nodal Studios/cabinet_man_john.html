@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cabinet Man John</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --walnut: #2a1f14; --mahogany: #4a2c1a; --oak: #8b5e3c;
+    --honey: #c4813a; --brass: #d4a843; --cream: #f5ede0;
+    --linen: #ede0cc; --charcoal: #1a1410;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--walnut); color: var(--cream); font-family: 'Source Sans 3', sans-serif; overflow-x: hidden; }
+
+  /* GRAIN */
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 200px 200px; pointer-events: none; z-index: 9999; opacity: 0.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: linear-gradient(to bottom, rgba(26,20,16,0.95), transparent);
+    backdrop-filter: blur(2px);
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; color: var(--brass); text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--linen); text-decoration: none; opacity: 0.8; transition: opacity 0.2s, color 0.2s; }
+  .nav-links a:hover { opacity: 1; color: var(--brass); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 4rem 6rem; position: relative;
+    background: linear-gradient(160deg, rgba(26,20,16,0.2) 0%, rgba(42,31,20,0.7) 50%, rgba(26,20,16,0.97) 100%),
+      repeating-linear-gradient(92deg, transparent 0px, transparent 18px, rgba(139,94,60,0.06) 18px, rgba(139,94,60,0.06) 19px),
+      repeating-linear-gradient(180deg, rgba(196,129,58,0.04) 0px, rgba(196,129,58,0.04) 60px, transparent 60px, transparent 120px),
+      radial-gradient(ellipse at 70% 40%, #5a3420 0%, #2a1f14 60%, #1a1410 100%);
+  }
+  #hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(175deg, transparent 0%, transparent 3%, rgba(100,60,30,0.07) 3%, rgba(100,60,30,0.07) 3.5%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--brass); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
+  .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--brass); }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(4rem, 9vw, 9rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; color: var(--cream); opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards; }
+  .hero-title span { color: var(--honey); display: block; }
+  .hero-sub { font-family: 'Crimson Text', serif; font-style: italic; font-size: 1.4rem; color: var(--linen); margin-top: 1.5rem; max-width: 480px; opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards; }
+  .hero-cta { margin-top: 3rem; display: flex; gap: 1.5rem; align-items: center; opacity: 0; animation: fadeUp 0.9s ease 0.9s forwards; }
+
+  .btn-primary { background: var(--brass); color: var(--charcoal); padding: 0.9rem 2.5rem; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-primary:hover { background: var(--honey); transform: translateY(-1px); }
+  .btn-ghost { color: var(--linen); font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid rgba(245,237,224,0.3); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+  .btn-ghost:hover { color: var(--brass); border-color: var(--brass); }
+
+  .hero-badge-wrap { position: absolute; right: 5rem; top: 50%; transform: translateY(-50%); width: 140px; height: 140px; }
+  .hero-badge { position: absolute; inset: 0; animation: spin 30s linear infinite; }
+  .hero-badge-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .badge-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--brass); line-height: 1; }
+  .badge-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--linen); opacity: 0.7; margin-top: 0.2rem; }
+
+  /* SECTIONS */
+  section { padding: 7rem 4rem; }
+  .section-label { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--brass); display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .section-label::after { content: ''; width: 60px; height: 1px; background: var(--brass); opacity: 0.5; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 700; line-height: 1.1; color: var(--cream); margin-bottom: 1.5rem; }
+  .section-body { font-family: 'Crimson Text', serif; font-size: 1.25rem; line-height: 1.75; color: var(--linen); opacity: 0.85; max-width: 600px; }
+  .divider { display: block; height: 1px; margin: 0 4rem; background: linear-gradient(to right, transparent, rgba(212,168,67,0.25), transparent); }
+
+  /* ABOUT */
+  #about { background: linear-gradient(135deg, #211810 0%, #2a1f14 50%, #1e160e 100%); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+  .about-visual { position: relative; height: 480px; }
+  .about-frame { position: absolute; width: 80%; height: 85%; top: 0; left: 0; background: linear-gradient(135deg, #5a3a22, #3a2314); border: 1px solid rgba(212,168,67,0.15); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .about-frame::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(168deg, transparent 0%, transparent 4%, rgba(139,94,60,0.12) 4%, rgba(139,94,60,0.12) 4.5%); }
+  .about-frame-icon { font-size: 5rem; opacity: 0.15; position: relative; z-index: 1; }
+  .about-accent { position: absolute; bottom: 0; right: 0; width: 55%; height: 55%; border: 2px solid rgba(212,168,67,0.35); background: var(--mahogany); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.3rem; }
+  .about-accent .num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; color: var(--brass); }
+  .about-accent .lbl { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--linen); opacity: 0.6; text-align: center; padding: 0 1rem; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+  .stat { border-left: 2px solid var(--brass); padding-left: 1.2rem; }
+  .stat .n { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--honey); }
+  .stat .l { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--linen); opacity: 0.6; }
+
+  /* SERVICES */
+  #services { background: var(--charcoal); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 4rem; }
+  .service-card { background: var(--mahogany); padding: 2.5rem; border-top: 3px solid transparent; transition: border-color 0.2s, background 0.2s, transform 0.2s; cursor: default; position: relative; overflow: hidden; }
+  .service-card::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(172deg, transparent 0%, transparent 5%, rgba(139,94,60,0.06) 5%, rgba(139,94,60,0.06) 5.5%); }
+  .service-card:hover { border-top-color: var(--brass); background: #5a3420; transform: translateY(-4px); }
+  .service-icon { font-size: 2.2rem; margin-bottom: 1.2rem; }
+  .service-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--cream); margin-bottom: 0.8rem; }
+  .service-desc { font-family: 'Crimson Text', serif; font-size: 1.05rem; line-height: 1.65; color: var(--linen); opacity: 0.75; }
+
+  /* GALLERY */
+  #gallery { background: linear-gradient(180deg, #1e160e, #2a1f14); }
+  .gallery-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 4px; margin-top: 4rem; }
+  .gallery-item { position: relative; overflow: hidden; background: var(--mahogany); cursor: pointer; }
+  .gallery-item:first-child { grid-row: 1 / 3; }
+  .gallery-item::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(168deg, transparent 0%, transparent 4%, rgba(139,94,60,0.1) 4%, rgba(139,94,60,0.1) 4.5%); z-index: 1; }
+  .gallery-item::after { content: attr(data-label); position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(26,20,16,0.9)); padding: 2rem 1.2rem 1rem; font-family: 'Crimson Text', serif; font-style: italic; font-size: 0.95rem; color: var(--linen); opacity: 0; transition: opacity 0.3s; z-index: 2; }
+  .gallery-item:hover::after { opacity: 1; }
+  .gallery-placeholder { position: absolute; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; opacity: 0.08; }
+  .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(74,44,26,0.5), rgba(42,31,20,0.3)); opacity: 0; transition: opacity 0.3s; z-index: 1; }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-note { margin-top: 2rem; font-family: 'Crimson Text', serif; font-style: italic; font-size: 1rem; color: var(--linen); opacity: 0.5; text-align: center; }
+
+  /* CONTACT */
+  #contact { background: var(--charcoal); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+  .contact-detail { display: flex; align-items: flex-start; gap: 1.2rem; margin-bottom: 2rem; }
+  .contact-icon { width: 42px; height: 42px; border: 1px solid rgba(212,168,67,0.3); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; color: var(--brass); }
+  .contact-detail-text .t { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); margin-bottom: 0.3rem; }
+  .contact-detail-text .v { font-family: 'Crimson Text', serif; font-size: 1.15rem; color: var(--linen); }
+  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass); opacity: 0.8; }
+  .form-group input, .form-group select, .form-group textarea { background: rgba(74,44,26,0.35); border: 1px solid rgba(212,168,67,0.18); color: var(--cream); padding: 0.85rem 1rem; font-family: 'Source Sans 3', sans-serif; font-size: 0.95rem; outline: none; transition: border-color 0.2s; width: 100%; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(245,237,224,0.3); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: rgba(212,168,67,0.5); background: rgba(74,44,26,0.5); }
+  .form-group select option { background: #2a1f14; }
+  .form-group textarea { min-height: 120px; resize: vertical; }
+  .form-submit { background: var(--brass); color: var(--charcoal); border: none; cursor: pointer; padding: 1rem 2.5rem; font-family: 'Source Sans 3', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; align-self: flex-start; transition: background 0.2s, transform 0.15s; }
+  .form-submit:hover { background: var(--honey); transform: translateY(-1px); }
+
+  /* FOOTER */
+  footer { background: var(--charcoal); border-top: 1px solid rgba(212,168,67,0.12); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: space-between; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--brass); letter-spacing: 0.05em; }
+  .footer-copy { font-size: 0.75rem; letter-spacing: 0.1em; color: var(--linen); opacity: 0.35; }
+  .footer-tagline { font-family: 'Crimson Text', serif; font-style: italic; font-size: 0.95rem; color: var(--linen); opacity: 0.45; }
+
+  /* PROGRESS & REVEAL */
+  .progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--brass); z-index: 200; width: 0%; transition: width 0.1s linear; }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* TOAST */
+  .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--brass); color: var(--charcoal); padding: 0.8rem 2rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0; transition: all 0.4s ease; z-index: 1000; pointer-events: none; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav>
+  <a class="nav-logo" href="#hero">Cabinet Man John</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-eyebrow">Custom Cabinetry · Colorado City, AZ</div>
+  <h1 class="hero-title">Cabinet<span>Man John</span></h1>
+  <p class="hero-sub">Twenty-five years of hand-crafted cabinetry, built with the kind of care that outlasts the house itself.</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="#contact">Get a Free Quote</a>
+    <a class="btn-ghost" href="#gallery">See the Work</a>
+  </div>
+  <div class="hero-badge-wrap">
+    <svg class="hero-badge" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+      <defs><path id="circle-text" d="M 70,70 m -55,0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0"/></defs>
+      <circle cx="70" cy="70" r="67" fill="none" stroke="rgba(212,168,67,0.2)" stroke-width="1"/>
+      <text fill="rgba(212,168,67,0.55)" font-size="9" font-family="Source Sans 3" letter-spacing="3.2">
+        <textPath href="#circle-text" startOffset="0%">HANDCRAFTED · QUALITY · TRUSTED · SINCE 2000 · </textPath>
+      </text>
+    </svg>
+    <div class="hero-badge-inner">
+      <span class="badge-num">25</span>
+      <span class="badge-label">Years of<br>Craft</span>
+    </div>
+  </div>
+</section>
+
+<span class="divider"></span>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <div class="about-visual">
+    <div class="about-frame"><div class="about-frame-icon">🪵</div></div>
+    <div class="about-accent">
+      <span class="num">25+</span>
+      <span class="lbl">Years building<br>Arizona homes</span>
+    </div>
+  </div>
+  <div>
+    <div class="section-label">About John</div>
+    <h2 class="section-title">Built by one man.<br>Built to last.</h2>
+    <p class="section-body">John has been crafting custom cabinetry for over 25 years — not as a company, but as a craftsman. Every cabinet he builds carries his name and his reputation. He measures twice, cuts once, and never rushes a job that's meant to last a lifetime.</p>
+    <p class="section-body" style="margin-top:1rem;">From kitchen renovations to full custom builds, John works directly with each homeowner — no middlemen, no crews cutting corners. Just one man and a lifetime of skill.</p>
+    <div class="about-stats">
+      <div class="stat"><div class="n">25+</div><div class="l">Years Experience</div></div>
+      <div class="stat"><div class="n">500+</div><div class="l">Kitchens Built</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">Custom Work</div></div>
+      <div class="stat"><div class="n">AZ/UT</div><div class="l">Local & Trusted</div></div>
+    </div>
+  </div>
+</section>
+
+<span class="divider"></span>
+
+<!-- SERVICES -->
+<section id="services" class="reveal">
+  <div class="section-label">What I Do</div>
+  <h2 class="section-title">Crafted for every room.</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🍳</div>
+      <div class="service-name">Kitchen Cabinets</div>
+      <div class="service-desc">Full custom kitchen builds — from layout planning to final install. Every inch designed around how you actually use your space.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🛁</div>
+      <div class="service-name">Bathroom Vanities</div>
+      <div class="service-desc">Custom vanities that fit your bathroom's exact dimensions, with storage that actually makes sense.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📚</div>
+      <div class="service-name">Built-In Shelving</div>
+      <div class="service-desc">Floor-to-ceiling built-ins, entertainment centers, and bookcases that look like they were always part of the house.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🗄️</div>
+      <div class="service-name">Garage Storage</div>
+      <div class="service-desc">Heavy-duty custom storage systems that turn a cluttered garage into a workspace you're proud of.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🪵</div>
+      <div class="service-name">Custom Millwork</div>
+      <div class="service-desc">Crown moulding, trim work, and detailed millwork that finishes a room with craftsmanship you can feel.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <div class="service-name">Cabinet Repair</div>
+      <div class="service-desc">Refinishing, refacing, hardware upgrades — breathe new life into existing cabinetry without a full replacement.</div>
+    </div>
+  </div>
+</section>
+
+<span class="divider"></span>
+
+<!-- GALLERY -->
+<section id="gallery" class="reveal">
+  <div class="section-label">Past Work</div>
+  <h2 class="section-title">The proof is in the grain.</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item" data-label="Full custom kitchen remodel — Hildale, UT">
+      <div class="gallery-placeholder">🪵</div>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item" data-label="Walnut bathroom vanity">
+      <div class="gallery-placeholder">🛁</div>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item" data-label="Floor-to-ceiling built-ins">
+      <div class="gallery-placeholder">📚</div>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item" data-label="Garage workshop cabinets">
+      <div class="gallery-placeholder">🔧</div>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item" data-label="Custom kitchen island">
+      <div class="gallery-placeholder">🍳</div>
+      <div class="gallery-overlay"></div>
+    </div>
+  </div>
+  <p class="gallery-note">Photos coming soon — reach out to see examples of John's work in person.</p>
+</section>
+
+<span class="divider"></span>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="contact-info">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's talk about<br>your project.</h2>
+    <p class="section-body" style="margin-bottom:3rem;">No pressure, no sales pitch. Tell John what you're thinking and he'll give you a straight answer on what it'll take.</p>
+    <div class="contact-detail">
+      <div class="contact-icon">📞</div>
+      <div class="contact-detail-text"><div class="t">Phone</div><div class="v">(928) 555-0142</div></div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">📍</div>
+      <div class="contact-detail-text"><div class="t">Location</div><div class="v">Colorado City, AZ &amp; surrounding areas</div></div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">⏰</div>
+      <div class="contact-detail-text"><div class="t">Hours</div><div class="v">Mon–Fri, 7am–5pm</div></div>
+    </div>
+  </div>
+  <div class="contact-form">
+    <div class="form-row">
+      <div class="form-group"><label>First Name</label><input type="text" placeholder="John"/></div>
+      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
+    </div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(928) 555-0100"/></div>
+    <div class="form-group">
+      <label>Project Type</label>
+      <select>
+        <option value="" disabled selected>Select a service…</option>
+        <option>Kitchen Cabinets</option>
+        <option>Bathroom Vanity</option>
+        <option>Built-In Shelving</option>
+        <option>Garage Storage</option>
+        <option>Custom Millwork</option>
+        <option>Cabinet Repair</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Tell me about your project</label><textarea placeholder="What are you looking to build or renovate? Any details help…"></textarea></div>
+    <button class="form-submit" onclick="handleSubmit()">Send Message</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Cabinet Man John</div>
+  <div class="footer-tagline">Built by hand. Built to last.</div>
+  <div class="footer-copy">© 2025 Cabinet Man John · Colorado City, AZ</div>
+</footer>
+
+<div class="toast" id="toast">Message sent — John will be in touch!</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const el = document.getElementById('progress');
+    const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    el.style.width = pct + '%';
+  });
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+  function handleSubmit() {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3500);
+  }
+</script>
+</body>
+</html>
