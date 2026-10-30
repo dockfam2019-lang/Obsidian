@@ -4,7 +4,9 @@ created: 2026-10-30
 ---
 # Computer Cleanup: Delete List (2026-10-30)
 
-Scanned **Desktop, Downloads, Documents, Projects**. **Nothing has been deleted yet.**
+Scanned **Desktop, Downloads, Documents, Projects**.
+
+> ✅ **Done 2026-10-30:** deleted 683 files (~3.1 GB). **Kept:** everything under "Check before deleting", plus `MacWhisper 3.app`, `MacWhisper 4.app`, `Ice.app` in Downloads (could be the real apps). Delete those yourself once they're confirmed to be in Applications.
 
 **Suggested to delete: 1401 files, about 3459.5 MB.** Say "delete the list" (or name sections) and Claude will do it.
 
