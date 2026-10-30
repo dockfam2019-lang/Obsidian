@@ -28,3 +28,5 @@ Sentri work days while in school: **Mon, Thu, Fri**
 - Arizona ESA funds school purchases (laptop)
 
 Related: [[People/Bryan]]
+
+- Ch. 1–6 study guide, Sonnet 75, history Qs: [[AI Conversations/Topics/School]]

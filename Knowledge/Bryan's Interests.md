@@ -37,3 +37,5 @@ Long-term goal is 1500 ELO. Operation Ascend targets 800 by August. Started at 6
 ## Related
 - [[Projects/Operation Ascend]]
 - [[People/Bryan]]
+
+- Fantasy chats: [[AI Conversations/Topics/Fantasy Football]] · grooming: [[AI Conversations/Topics/Appearance & Grooming]]

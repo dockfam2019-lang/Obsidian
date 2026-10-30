@@ -52,6 +52,10 @@
 ## 📓 Journal
 - [[Journal/2026-10-30]] · [[Journal/2026-05-26]] · [[Journal/2026-05-23]]
 
+## 💬 AI Conversations
+- [[AI Conversations/AI Conversations Index]]: 50 ChatGPT + Codex chats (Oct 16–30)
+- [[AI Conversations/Context and Preferences]]
+
 ## 🤖 AI Memory
 - [[AI Memory/Working with Jarvis]]
 

@@ -67,3 +67,5 @@ updated: 2026-10-30
 - On the 7/16 call I told Peter the $40K draw comes at foundation complete, but the contract says mobilization. Don't repeat that
 
 Related: [[Sentri/Sentri Homes]] · [[Sentri/Contractors & Vendors]]
+
+- Related construction Q&A: [[AI Conversations/Topics/Homebuilding]]
