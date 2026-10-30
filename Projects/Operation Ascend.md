@@ -109,6 +109,17 @@ New photos. Log all numbers. Write down what changed.
 
 ---
 
+---
+
+## Retro (added Oct 2026)
+The summer ran May 10 → Aug 1 (finish line Labor Day). The weekly log was never filled in. Here's what actually happened, pillar by pillar:
+- **Career:** the plan was an AutoCAD drafting job. **Landed Sentri Homes instead (mid-May)** and became the top coordinator → [[Sentri/Sentri Homes]]
+- **Money:** Sentri pay + 5% commission + Nodal Studios
+- **App:** AutoCAD plugin still in progress. Built other tools instead (margin tracker, TradeSignal, trading bot, daily job loop)
+- **Fitness:** still training 5am daily with Gradeon. Final weight/bench and 75 Hard result not logged
+- **Chess:** 800 ELO goal, result not logged
+- [ ] Fill in the final numbers
+
 ## Related
 - [[Projects/AutoCAD Tracking Plugin]]
 - [[Tasks/AutoCAD Plugin MVP Tasks]]

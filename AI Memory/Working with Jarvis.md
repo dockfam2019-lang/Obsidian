@@ -29,6 +29,13 @@ created: 2026-05-23
 - Padding answers with caveats
 - Judging him on who he was in middle school
 
+## Current Context (updated 2026-10-30)
+- Now a **senior** (Class of 2027). Sentri work days are Mon/Thu/Fri
+- Sentri **Project/Fulfillment Coordinator** since mid-May, top throughput. Active jobs: [[Sentri/Jobs/Job Board]]
+- The daily 7am/5pm job loop runs as scheduled tasks → [[Projects/Sentri Automation]]
+- For the full picture, read [[Timeline/Since April 2026]] first
+- Mass outreach texts: city/area only, never a street address
+
 ## Workspace Access
 - Jarvis project: `/Users/bryandockstader/Documents/Jarvis`
 - Obsidian vault: `/Users/bryandockstader/Documents/Obsidian Vault`

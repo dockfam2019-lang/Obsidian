@@ -40,6 +40,12 @@ Get first paying customer. Track → Google Sheets → sell.
 - Auto layers
 - Keep packaging and growing MRR
 
+## Status Update (Oct 2026)
+- The last logged progress is from **5/23** (Phases 1–2 done, Phase 3 next). The MVP target was late June to mid July
+- Plan: sell on the **Autodesk App Store at ~$10/seat/month**. Launching it is a stated goal
+- There's an `AutoDimPlugin` folder on my Mac, which matches the "auto dimension" roadmap item
+- [ ] Update this: where is Caleb on Phases 3–8? Is the Google Sheet + service account set up?
+
 ## GitHub
 - [autocad-tracking-plugin](https://github.com/calebdockstader-star/autocad-tracking-plugin)
 

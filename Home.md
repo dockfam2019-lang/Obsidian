@@ -2,35 +2,58 @@
 
 > Start here. Everything links from this page.
 
+**Latest review:** [[Timeline/Since April 2026]] (everything from April → October 2026)
+
 ---
 
-## 🎯 Active Projects
-- [[Projects/Operation Ascend]] — 12-week summer plan, May 10 → Aug 1
-- [[Projects/AutoCAD Tracking Plugin]] — building with Caleb, MVP by July
+## 🏗️ Sentri Homes (work)
+- [[Sentri/Sentri Homes]]: role, systems, rules, Indeed ad format
+- [[Sentri/Jobs/Job Board]]: active + closed jobs
+  - 🟢 [[Sentri/Jobs/Active/Peter Eggen Build]]: $200K new build, VT
+  - 🟢 [[Sentri/Jobs/Active/Greg & Deborah Dowling Kitchen]]: Lima, OH
+  - 🟢 [[Sentri/Jobs/Active/Matthew Pryor Roof]]: Merrillville, IN
+- [[Sentri/Contractors & Vendors]]: who to hire again (and who not to)
+- [[Sentri/Lessons Learned]]: patterns that cost money
 
-## ✅ Active Tasks
-- [[Tasks/AutoCAD Plugin MVP Tasks]] — Phase 3 up next
-- [[Tasks/Operation Ascend Weekly Log]] — fill in every Sunday
+## 🎯 Projects
+- [[Projects/Sentri Automation]]: daily 7am/5pm job loop, handbook, tools
+- [[Projects/AutoCAD Tracking Plugin]]: with Caleb (needs a status update)
+- [[Projects/AI Trading Bot]]: Alpaca paper trading
+- [[Projects/TradeSignal]]: contractor-reporting pilot site
+- [[Projects/Nodal Studios]]: web design side business
+- [[Projects/Snapchat Reply Bot]]
+- [[Projects/Eggcellent Engineering]]: Senior Leadership egg drop
+- [[Projects/Operation Ascend]]: summer plan (ended Aug 1, retro added)
+- [[Projects/Code Projects on My Mac]]
+
+## ✅ Tasks
+- [[Tasks/AutoCAD Plugin MVP Tasks]]
+- [[Tasks/Operation Ascend Weekly Log]] (archived)
 
 ## 👥 People
-- [[People/Bryan]] — you
-- [[People/Caleb Dockstader]] — co-founder, lead dev
+- **Me:** [[People/Bryan]]
+- **Friends:** [[People/Caleb Dockstader]] · [[People/Gradeon Timpson]] · [[People/Ethan Knudson]]
+- **Sentri:** [[People/Steven]] · [[People/Monte]] · [[People/Alonso Timpson]] · [[People/Brady]] · [[People/Violet Barlow]]
+- **School:** [[People/Michael Bradshaw]]
 
 ## 🧠 Knowledge
-- [[Knowledge/Bryan's Mindset]] — what drives him, fears, goals
-- [[Knowledge/Bryan's Interests]] — sports, chess, music, hobbies
-- [[Knowledge/Business Background]] — Sentri Homes, wheel trading, the plan
-- [[Knowledge/Community and Faith]] — Centennial Park, mission, Mr. Hammon
-- [[Knowledge/AutoCAD Plugin Tech Stack]] — C#, AutoCAD API, Google Sheets
+- [[Knowledge/Bryan's Mindset]]
+- [[Knowledge/Bryan's Interests]]
+- [[Knowledge/Business Background]]
+- [[Knowledge/Community and Faith]]
+- [[Knowledge/School - Senior Year]]
+- [[Knowledge/Tools & AI Stack]]
+- [[Knowledge/Investing]]
+- [[Knowledge/AutoCAD Plugin Tech Stack]]
 
 ## 📁 Reference
-- [[Reference/Resume]] — current resume, Class of 2027
+- [[Reference/Resume]]
 
 ## 📓 Journal
-- [[Journal/2026-05-23]]
+- [[Journal/2026-10-30]] · [[Journal/2026-05-26]] · [[Journal/2026-05-23]]
 
 ## 🤖 AI Memory
 - [[AI Memory/Working with Jarvis]]
 
 ---
-*Updated: 2026-05-23*
+*Updated: 2026-10-30*

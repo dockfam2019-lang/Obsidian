@@ -21,7 +21,7 @@ Best teacher: Mr. Walter Hammon — taught church history but really taught stru
 Mission first (standard for the community). Then: get rich with SaaS and side hustles. No college plans mentioned.
 
 ## Work
-**Sentri Homes** — fulfillment (current job)
+**Sentri Homes** — Project/Fulfillment Coordinator since mid-May 2026, top throughput on the team → [[Sentri/Sentri Homes]]
 Sentri Homes sits under Evolution Drafting, which draws up residential house plans.
 **Dockstader's Cabinet Company** — family business, occasional work
 
@@ -33,6 +33,8 @@ Sentri Homes sits under Evolution Drafting, which draws up residential house pla
 - Debate
 
 ## See Also
+- [[Knowledge/School - Senior Year]]
+- [[Timeline/Since April 2026]]
 - [[Reference/Resume]]
 - [[People/Caleb Dockstader]]
 - [[Projects/AutoCAD Tracking Plugin]]

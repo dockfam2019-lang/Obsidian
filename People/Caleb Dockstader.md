@@ -13,5 +13,9 @@ Caleb is the one who came up with the AutoCAD plugin idea. Bryan runs the busine
 - Username: calebdockstader-star
 - Repo: [autocad-tracking-plugin](https://github.com/calebdockstader-star/autocad-tracking-plugin)
 
+## Notes (Oct 2026)
+- Smartest person I know. One of my close friends
+- Plan for the app: Autodesk App Store at ~$10/seat/month
+
 ## Connections
 - [[People/Bryan]] — co-founder, CEO
