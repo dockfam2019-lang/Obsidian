@@ -67,6 +67,6 @@ updated: 2026-10-30
 | Potomac Job Corps Trim | — | ✅ Complete | — | [[Sentri/Jobs/Closed/Potomac Job Corps]] |
 | Potomac Job Corps Peel & Stick | Flooring | ✅ Complete | — | [[Sentri/Jobs/Closed/Potomac Job Corps]] |
 
-**Totals:** 28 complete · 3 cancelled · 1 refunded. Not on this list: active jobs (Eggen, Dowling, Pryor) and jobs handed off (Forestine Cooper, Debbie Jensen, Richard Clifton, Chad Heller, Tafoya, Daniels, Fowler).
+**Totals:** 28 complete · 3 cancelled · 1 refunded. Not on this list: active jobs (Eggen, Dowling, Pryor) jobs handed off (Forestine Cooper, Debbie Jensen, Chad Heller, Tafoya, Daniels, Fowler), and Richard Clifton (done 10/12, but Notion still says "Materials Refunding").
 
 Related: [[Sentri/Sentri Homes]]
